@@ -4,11 +4,11 @@ import styled, { css } from 'styled-components';
 const titleSize = {
   small: (theme) =>
     css`
-      font-size: ${theme.sizes.small};
+      font-size: ${theme.sizes.medium};
     `,
   medium: (theme) =>
     css`
-      font-size: ${theme.sizes.medium};
+      font-size: ${theme.sizes.large};
     `,
   big: (theme) =>
     css`
@@ -33,7 +33,7 @@ const titleCase = (uppercase) => css`
 
 export const Title = styled.h1`
   ${({ theme, colorDark, size, uppercase }) => css`
-    color: ${colorDark ? theme.colors.white : theme.colors.primaryColor};
+    color: ${colorDark ? theme.colors.primaryColor : theme.colors.white};
     ${titleSize[size](theme)}
     ${titleCase(uppercase)}
   `}
