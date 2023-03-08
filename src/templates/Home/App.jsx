@@ -1,10 +1,11 @@
+import { Heading } from '../../components/Heading';
 import * as Styled from './styles';
 
 function Home() {
   return (
     <div className="App">
       <Styled.Wrapper>
-        <h2>Oi</h2>
+        <Heading>Texto</Heading>
       </Styled.Wrapper>
     </div>
   );
