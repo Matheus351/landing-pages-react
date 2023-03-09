@@ -1,22 +1,34 @@
 import { mapMenu } from './map-menu';
 import { mapSections } from './map-sections';
 
-export const mapData = (pagesData = [{}]) => {
+export const mapData = (pagesData = []) => {
   return pagesData.map((data) => {
+    // const {
+    //   footer_text: footerHtml = '',
+    //   slug = '',
+    //   title = '',
+    //   sections = [],
+    //   menu = {},
+    // } = data;
+
     const {
-      footer_text: footerHtml = '',
-      slug = '',
-      title = '',
-      sections = [],
-      menu = {},
+      attributes: { title, slug, footer_text: footerHtml, sections, menu },
     } = data;
 
+    console.log(title, slug, footerHtml);
     return {
-      footerHtml,
-      slug,
       title,
+      slug,
+      footerHtml,
       sections: mapSections(sections),
       menu: mapMenu(menu),
     };
+    // return {
+    //   footerHtml,
+    //   slug,
+    //   title,
+    //   sections: mapSections(sections),
+    //   menu: mapMenu(menu),
+    // };
   });
 };
