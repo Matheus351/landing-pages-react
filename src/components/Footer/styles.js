@@ -6,6 +6,7 @@ export const Container = styled.footer`
   ${({ theme }) => css`
     text-align: center;
     border-top: 0.1rem solid ${theme.colors.mediumGray};
+    padding: 3.2rem;
 
     a {
       color: inherit;

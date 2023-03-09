@@ -18,7 +18,7 @@ export const Grid = styled.div`
     gap: ${theme.spacings.large};
     overflow: hidden;
     width: :100%;
-    @media ${theme.media.ltMedium}{
+    @media ${theme.media.lteMedium}{
       grid-template-columns: 1fr;
     }
   `}

@@ -15,7 +15,6 @@ export const mapData = (pagesData = []) => {
       attributes: { title, slug, footer_text: footerHtml, sections, menu },
     } = data;
 
-    console.log(title, slug, footerHtml);
     return {
       title,
       slug,
