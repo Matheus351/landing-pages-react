@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from 'react';
 import { mapData } from '../../api/map-data';
 import { PageNotFound } from '../PageNotFound';
 import { Loading } from '../Loading';
-import { Heading } from '../../components/Heading';
 import { GridTwoColum } from '../../components/GridTwoColumns';
 import { GridContent } from '../../components/GridContent';
 import { GridText } from '../../components/GridText';
@@ -20,6 +19,7 @@ function Home() {
   useEffect(() => {
     const pathname = location.pathname.replace(/[^a-z0-9-_]/gi, '');
     const slug = pathname ? pathname : config.url;
+    console.log(slug);
     const load = async () => {
       try {
         const data = await fetch(
@@ -28,8 +28,9 @@ function Home() {
         const json = await data.json();
         const pageData = mapData(json.data);
         console.log(pageData);
-        setData(pageData[0]);
+        setData(pageData[1]);
       } catch (error) {
+        console.log(error);
         setData(undefined);
       }
     };

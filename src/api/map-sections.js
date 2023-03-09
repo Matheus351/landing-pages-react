@@ -85,6 +85,8 @@ export const mapTextGrid = (section) => {
 };
 
 export const mapImageGrid = (section) => {
+  console.log(section);
+
   const {
     title,
     description,
