@@ -23,7 +23,7 @@ function Home() {
     const load = async () => {
       try {
         const data = await fetch(
-          `http://localhost:1337/api/pages/?slug=${slug}&populate=deep`,
+          `https://strapi-backend-v4.onrender.com/api/pages/?slug=${slug}&populate=deep`,
         );
         const json = await data.json();
         const pageData = mapData(json.data);
